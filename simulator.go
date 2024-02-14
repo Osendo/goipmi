@@ -96,7 +96,7 @@ func (s *Simulator) LocalAddr() *net.UDPAddr {
 // Run the Simulator.
 func (s *Simulator) Run() error {
 	var err error
-	s.conn, err = net.ListenUDP("udp4", &s.addr)
+	s.conn, err = net.ListenUDP("udp", &s.addr)
 	if err != nil {
 		return err
 	}
